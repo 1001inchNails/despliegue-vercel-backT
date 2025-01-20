@@ -41,6 +41,13 @@ const app = express();
 
 app.use(express.json());
 
+
+app.get("/", (req, res) => {
+  res.json({
+    message: "PI PI PI MADAFAKA",
+  })
+})
+
 // https://stackoverflow.com/questions/47523265/jquery-ajax-no-access-control-allow-origin-header-is-present-on-the-requested
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
